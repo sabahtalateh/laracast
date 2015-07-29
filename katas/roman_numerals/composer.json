@@ -1,0 +1,19 @@
+{
+  "name": "alez/prime_numbers",
+  "description": "prime_numbers_kata",
+  "authors": [
+    {
+      "name": "alez",
+      "email": "sabahtalateh@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpspec/phpspec": "~2.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src"
+    }
+  }
+}
