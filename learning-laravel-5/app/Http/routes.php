@@ -48,7 +48,9 @@ Route::get('tags/{tags}', 'TagsController@show');
 //}]);
 
 Route::resource('lessons', 'LessonsController');
-Route::resource('episodes', 'EpisodesController');
+Route::resource('lessons.episodes', 'EpisodesController');
+
+
 Route::get('all', 'PagesController@all');
 
 Route::get('users', function(){

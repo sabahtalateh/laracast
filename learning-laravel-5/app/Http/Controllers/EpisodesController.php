@@ -50,9 +50,9 @@ class EpisodesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($lessonId, $episodeId)
     {
-        //
+        echo $lessonId . ' ' . $episodeId;
     }
 
     /**

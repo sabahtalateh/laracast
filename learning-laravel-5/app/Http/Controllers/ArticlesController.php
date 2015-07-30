@@ -121,4 +121,8 @@ class ArticlesController extends Controller
         $this->syncTags($article, $request->input('tag_list'));
     }
 
+    public function r()
+    {
+        return 1;
+    }
 }
