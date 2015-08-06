@@ -1,21 +1,19 @@
 suites:
-    main:
-        namespace: App
-        psr4_prefix: App
-        src_path: app
-        spec_path: tests
+#    main:
+#        namespace: App
+#        psr4_prefix: App
+#        src_path: app
+#        spec_path: ./
+    acme:
+        namespace: Acme
+        psr4_prefix: Acme
+        src_path: app/Acme
+        spec_path: spec/Acme
 
 extensions:
     - PhpSpec\Laravel\Extension\LaravelExtension
 
 laravel_extension:
     testing_environment: 'testing'
-
-suites:
-    my_suite:
-        namespace: App
-        psr4_prefix: App
-        src_path: app
-        spec_prefix: spec
 
 #formatter.name: pretty

@@ -1,0 +1,9 @@
+suites:
+#    main:
+#        namespace: App
+#        psr4_prefix: App
+#        src_path: app
+  acme:
+    namespace: Acme
+    psr4_prefix: Acme
+    src_path: app/Acme
