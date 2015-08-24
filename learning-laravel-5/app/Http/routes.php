@@ -22,7 +22,7 @@ Route::get('foo', 'FooController@foo');
 Route::get('/', function () {
 //    Cache::put('foo', 'bar', 10);
 //    vd(Cache::get('foo'));
-    return 'Home Page';
+    return 'Home Page!!';
 });
 
 Route::get('tasks', function () {

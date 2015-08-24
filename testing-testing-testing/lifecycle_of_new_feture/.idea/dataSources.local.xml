@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="acceptance" uuid="2581d36f-2bd0-473d-8c03-179f51e4f817">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+    <data-source name="production" uuid="e996700c-04c1-45ca-803c-97c7c75f4a6d">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+  </component>
+</project>
