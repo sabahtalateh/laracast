@@ -1,0 +1,5 @@
+# `functional` environment config goes here
+modules:
+    config:
+        Laravel5:
+            environment_file: tests/_envs/files/.functional

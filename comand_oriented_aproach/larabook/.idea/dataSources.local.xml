@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - larabook@192.168.10.10" uuid="e8eb90ec-fec5-491c-9d2a-3f8d3845481d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>homestead</user-name>
+      <schema-pattern>larabook.*</schema-pattern>
+      <default-schemas>larabook.*</default-schemas>
+    </data-source>
+    <data-source name="SQLite -" uuid="b0200d96-da8c-4968-9b28-d469bc89cb6e">
+      <secret-storage>master_key</secret-storage>
+    </data-source>
+  </component>
+</project>
