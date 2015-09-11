@@ -1,0 +1,7 @@
+I WANT TO LOGIN TO MY ACCOUNT
+
+I am "A Larabook Member"
+I sign in ""
+I see in current url "/statuses"
+I see "Welcome Back!"
+

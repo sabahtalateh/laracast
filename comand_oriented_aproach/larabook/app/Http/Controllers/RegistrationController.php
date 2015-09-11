@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Jobs\RegisterUser;
+use App\Users\User;
+use App\Users\UserRepository;
+use Illuminate\Contracts\Bus\Dispatcher as CommandDispatcher;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Laracasts\Flash\Flash;
 
 /**
  * Class RegistrationController
@@ -29,13 +35,17 @@ class RegistrationController extends Controller
 
     /**
      * @param Requests\SignUpRequest $request
+     * @param CommandDispatcher $commandDispatcher
      * @return
+     * @internal param $CommandDispatcher
      */
-    public function store(Requests\SignUpRequest $request)
+    public function store(Requests\SignUpRequest $request, CommandDispatcher $commandDispatcher)
     {
-        $user = User::create($request->only('username', 'email', 'password'));
+        $commandDispatcher->dispatchFrom(RegisterUser::class, $request);
 
-        \Auth::login($user);
+        \Auth::login(User::where('username', $request['username'])->first());
+
+        Flash::overlay('Welcome!!');
 
         return Redirect::home();
     }

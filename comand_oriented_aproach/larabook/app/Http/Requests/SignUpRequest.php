@@ -37,7 +37,6 @@ class SignUpRequest extends Request
      */
     protected function formatErrors(Validator $validator)
     {
-//        return [];
         return $validator->errors()->all();
     }
 

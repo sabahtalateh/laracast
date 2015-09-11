@@ -1,0 +1,15 @@
+I WANT TO SIGN UP FOR A LARABOOK ACCOUNT
+
+I am "a guest"
+I am on page "/"
+I click "Sign Up"
+I see current url equals "/register"
+I fill field "Username"," 'John Doe"
+I fill field "Email"," 'john@example.com"
+I fill field "Password"," 'password"
+I fill field "Password Confirmation"," 'password"
+I click "Sign Up"
+I see current url equals ""
+I see "Welcome here"
+I assert true(\auth::check ")"
+

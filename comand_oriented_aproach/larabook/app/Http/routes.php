@@ -16,12 +16,54 @@ get('/', [
     'uses' => 'PagesController@home'
 ]);
 
-get('register', [
-    'as' => 'register_path',
-    'uses' => 'RegistrationController@create'
+Route::group(['middleware' => 'guest'], function () {
+    get('register', [
+        'as' => 'register_path',
+        'uses' => 'RegistrationController@create'
+    ]);
+
+    post('register', [
+        'as' => 'register_path',
+        'uses' => 'RegistrationController@store'
+    ]);
+});
+
+Route::group(['middleware' => 'guest'], function () {
+    get('login', [
+        'as' => 'login_path',
+        'uses' => 'SessionsController@create'
+    ]);
+
+    post('login', [
+        'as' => 'login_path',
+        'uses' => 'SessionsController@store'
+    ]);
+});
+
+get('logout', [
+    'middleware' => 'auth',
+    'as' => 'logout_path',
+    'uses' => 'SessionsController@destroy'
 ]);
 
-post('register', [
-    'as' => 'register_path',
-    'uses' => 'RegistrationController@store'
+get('/statuses', [
+    'as' => 'statuses_path',
+    'middleware' => 'auth',
+    'uses' => 'StatusesController@index'
+]);
+
+post('/statuses', [
+    'as' => 'statuses_path',
+    'middleware' => 'auth',
+    'uses' => 'StatusesController@store'
+]);
+
+get('users', [
+    'as' => 'users_path',
+    'uses' => 'UsersController@index'
+]);
+
+get('@{username}', [
+    'as' => 'profile_path',
+    'uses' => 'UsersController@show'
 ]);
