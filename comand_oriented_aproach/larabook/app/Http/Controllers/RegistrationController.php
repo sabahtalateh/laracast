@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserRegistered;
 use App\Jobs\RegisterUser;
 use App\Users\User;
 use App\Users\UserRepository;
 use Illuminate\Contracts\Bus\Dispatcher as CommandDispatcher;
+use Illuminate\Contracts\Events\Dispatcher as Event;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -36,8 +38,8 @@ class RegistrationController extends Controller
     /**
      * @param Requests\SignUpRequest $request
      * @param CommandDispatcher $commandDispatcher
+     *
      * @return
-     * @internal param $CommandDispatcher
      */
     public function store(Requests\SignUpRequest $request, CommandDispatcher $commandDispatcher)
     {

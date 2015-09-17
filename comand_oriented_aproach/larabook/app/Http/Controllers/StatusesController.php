@@ -24,19 +24,9 @@ class StatusesController extends Controller
      */
     public function index(StatusRepository $statusRepository)
     {
-        $statuses = $statusRepository->getAllForUser(\Auth::user());
+        $statuses = $statusRepository->getFeedForUser(\Auth::user());
 
         return view('statuses.index', compact('statuses'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**

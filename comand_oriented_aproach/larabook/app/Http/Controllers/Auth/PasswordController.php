@@ -22,11 +22,11 @@ class PasswordController extends Controller
 
     /**
      * Create a new password controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
+        parent::__construct();
+
         $this->middleware('guest');
     }
 }

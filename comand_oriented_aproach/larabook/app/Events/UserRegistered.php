@@ -13,7 +13,7 @@ class UserRegistered extends Event
     /**
      * @var User
      */
-    private $user;
+    public $user;
 
     /**
      * Create a new event instance.

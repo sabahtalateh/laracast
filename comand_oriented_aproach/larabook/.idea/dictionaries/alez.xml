@@ -2,8 +2,14 @@
   <dictionary name="alez">
     <words>
       <w>autoprefixer</w>
+      <w>fallowable</w>
+      <w>fallower</w>
+      <w>fallowers</w>
       <w>gravatar</w>
       <w>larabook</w>
+      <w>unfallow</w>
+      <w>unfallower</w>
+      <w>unfallows</w>
     </words>
   </dictionary>
 </component>

@@ -19,7 +19,8 @@ class StatusesTableSeeder extends Seeder
         foreach (range(0, 500) as $index) {
             Status::create([
                 'user_id' => $faker->randomElement($userIds),
-                'body' => $faker->sentence()
+                'body' => $faker->sentence(),
+                'created_at' => $faker->dateTime()
             ]);
         }
 

@@ -18,4 +18,20 @@ class UserPresenter extends Presenter
         $email = md5($this->email);
         return "//www.gravatar.com/avatar/{$email}?s={$size}";
     }
+
+    public function fallowerCount()
+    {
+        $count = $this->entity->fallowers()->count();
+        $plural = str_plural('Fallower', $count);
+
+        return "{$count} {$plural}";
+    }
+
+    public function statusCount()
+    {
+        $count = $this->entity->statuses()->count();
+        $plural = str_plural('Status', $count);
+
+        return "{$count} {$plural}";
+    }
 }

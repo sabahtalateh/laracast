@@ -2,10 +2,12 @@
 
 namespace App\Users;
 
+use App\Statuses\Comment;
 use App\Statuses\Status;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
@@ -31,11 +33,12 @@ use Laracasts\Presenter\PresentableTrait;
  * @method static \Illuminate\Database\Query\Builder|\App\Users\User whereUpdatedAt($value)
  * @property-read \Illuminate\Database\Eloquent\Collection|Status[] $statuses
  */
-class User extends Model implements AuthenticatableContract,
+class User extends Model implements
+    AuthenticatableContract,
     AuthorizableContract,
     CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, PresentableTrait;
+    use Authenticatable, Authorizable, CanResetPassword, PresentableTrait, FallowableTrait;
 
     /**
      * The database table used by the model.
@@ -74,7 +77,12 @@ class User extends Model implements AuthenticatableContract,
 
     public function statuses()
     {
-        return $this->hasMany(Status::class);
+        return $this->hasMany(Status::class)->latest();
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function is($user)

@@ -31,8 +31,26 @@ class UserRepository
      */
     public function findByUsername($username)
     {
-        return User::with(['statuses' => function ($query) {
-            $query->latest();
-        }])->where('username', $username)->first();
+        return User::with('statuses')->where('username', $username)->first();
+    }
+
+    /**
+     * Find a user by their id
+     *
+     * @param $id
+     */
+    public function findById($id)
+    {
+        return User::findOrFail($id);
+    }
+
+    public function fallow(User $userToFallow, User $fallower)
+    {
+        return $fallower->fallowedUsers()->attach($userToFallow);
+    }
+
+    public function unfallow(User $userToUnfallow, User $unfallower)
+    {
+        return $unfallower->fallowedUsers()->detach($userToUnfallow);
     }
 }

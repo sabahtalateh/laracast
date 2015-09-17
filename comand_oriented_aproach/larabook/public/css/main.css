@@ -30,8 +30,7 @@ body {
 .status-media {
   border: 1px solid #e3e3e3;
   background: white;
-  padding: 1em;
-  margin-bottom: 2em; }
+  padding: 1em; }
 
 .user-block {
   text-align: center; }
@@ -40,3 +39,17 @@ body {
 
 .users {
   margin-bottom: 3em; }
+
+.status-wrp {
+  border-bottom: none; }
+
+.comment__create-form textarea {
+  border: 1px solid #e3e3e3;
+  border-radius: 0; }
+
+.comments {
+  margin-bottom: 5em; }
+  .comments .comments__comment {
+    margin-top: 0;
+    border: 1px solid #d9d9d9;
+    background: #f2f2f2; }

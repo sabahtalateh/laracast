@@ -13,6 +13,7 @@ abstract class Controller extends BaseController
     public function __construct()
     {
         View::share('currentUser', \Auth::user());
+        View::share('signedIn', \Auth::user());
     }
 
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;

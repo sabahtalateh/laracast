@@ -20,6 +20,7 @@
 
             <div class="form-group">
                 {!! Form::submit('Sign In', ['class' => 'btn btn-primary']) !!}
+                <a href="/password/email">Reset password</a>
             </div>
 
             {!! Form::close() !!}

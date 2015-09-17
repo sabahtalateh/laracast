@@ -40,9 +40,9 @@ body {
 // Each status
 .status-media {
   border: 1px solid #e3e3e3;
+  //  border-bottom: none;
   background: white;
   padding: 1em;
-  margin-bottom: 2em;
 }
 
 // Users list
@@ -55,4 +55,22 @@ body {
 
 .users {
   margin-bottom: 3em;
+}
+
+.status-wrp {
+  border-bottom: none;
+}
+
+.comment__create-form textarea {
+  border: 1px solid #e3e3e3;
+  border-radius: 0;
+}
+
+.comments {
+  margin-bottom: 5em;
+  .comments__comment {
+    margin-top: 0;
+    border: 1px solid darken(white, 15%);
+    background: darken(white, 5%);
+  }
 }
