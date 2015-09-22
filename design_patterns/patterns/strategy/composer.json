@@ -1,0 +1,15 @@
+{
+    "name": "alez/strategy",
+    "authors": [
+        {
+            "name": "alez",
+            "email": "sabahtalateh@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Acme\\": "src"
+      }
+    }
+}

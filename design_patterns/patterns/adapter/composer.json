@@ -1,0 +1,17 @@
+{
+  "name": "alez/adapter",
+  "authors": [
+    {
+      "name": "alez",
+      "email": "sabahtalateh@gmail.com"
+    }
+  ],
+  "require": {
+    "symfony/var-dumper": "^2.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Acme\\": "src"
+    }
+  }
+}

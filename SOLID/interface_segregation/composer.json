@@ -1,0 +1,10 @@
+{
+    "name": "alez/interface_segregation",
+    "authors": [
+        {
+            "name": "alez",
+            "email": "sabahtalateh@gmail.com"
+        }
+    ],
+    "require": {}
+}
