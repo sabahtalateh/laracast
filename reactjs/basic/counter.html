@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+<script src="https://fb.me/react-0.13.3.min.js"></script>
+<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+
+<!--<script type="text/jsx" src="Avatar.js"></script>-->
+
+
+<script type="text/jsx">
+    var Counter = React.createClass({
+        getInitialState: function () {
+            return {count: 0}
+        },
+
+        add: function () {
+            this.setState({
+                count: this.state.count + 1
+            });
+        },
+
+        subtract: function () {
+            this.setState({
+                count: this.state.count - 1
+            });
+        },
+
+        render: function () {
+            return <div>
+                <h1>Counter: {this.state.count}</h1>
+
+                <button onClick={this.subtract}>-1</button>
+                <button onClick={this.add}>+1</button>
+            </div>;
+        }
+    });
+
+    React.render(<Counter />, document.body);
+</script>
+
+</body>
+</html>
