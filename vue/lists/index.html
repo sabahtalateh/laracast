@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="demo">
+    <ul>
+        <li v-repeat="name: names" v-text="name"></li>
+    </ul>
+
+    <input type="text" v-model="newName" placeholder="Add a name" v-on="blur: addName">
+</div>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <title></title>
+</head>
+<body>
+<div id="post" class="container" v-show="isVisible">
+    <button class="glyphicon glyphicon-remove-sign pull-right" v-on="click: isVisible = false"></button>
+    <h1>Some Post</h1>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi assumenda id molestiae porro sed? Ab, adipisci
+        assumenda aut eligendi impedit ipsum iure labore omnis perspiciatis voluptatibus? Accusantium, adipisci amet
+        asperiores eius eos excepturi exercitationem, fuga fugit impedit modi nemo, officia ratione sit vel vero.
+        Architecto at delectus distinctio ipsum maiores officia omnis sequi similique sunt? Alias asperiores atque
+        autem, blanditiis distinctio enim harum ipsa neque obcaecati quaerat quibusdam quis sapiente velit. Ad beatae
+        consequatur cumque eum inventore iure magnam quam suscipit. Consequuntur magnam qui quidem. Libero odit
+        praesentium vel vero. Adipisci illum labore nesciunt possimus praesentium reprehenderit repudiandae sint veniam.
+    </p>
+
+    <button type="button"
+            class="btn btn-default btn-lg"
+            v-class="active: liked"
+            v-on="click: toggleLike"
+            >
+        <span class="glyphicon glyphicon-thumbs-up"></span> {{ likesCount }}
+    </button>
+
+    <br>
+
+    <pre>{{ $data | json }}</pre>
+
+</div>
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
