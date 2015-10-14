@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<div id="demo">
+
+    <div class="radio">
+        <label>
+            <input type="radio" v-model="gender" value="all"> All
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" v-model="gender" value="male"> Male
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" v-model="gender" value="female"> Female
+        </label>
+    </div>
+
+    <ul>
+        <li v-repeat="people | gender 'female'">{{ name }}: {{ gender }}</li>
+    </ul>
+</div>
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
