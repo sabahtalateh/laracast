@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+
+</head>
+<body id="demo">
+
+<script id="coupon-template" type="x-template">
+    <input type="text" v-model="coupon" v-on="blur: couponHasBeenEntered">
+    <span v-text="message">This coupon is invalid</span>
+
+    <!--{{ $data | json }}-->
+</script>
+
+<h1 v-show="coupon">Code is: {{ coupon }}</h1>
+
+<coupon when-applied="{{ setCoupon }}"></coupon>
+
+
+
+<script src="vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
