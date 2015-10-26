@@ -1,0 +1,3 @@
+<?php
+
+resource('posts', 'PostsController');
